@@ -16,3 +16,6 @@ resource "aws_subnet" "ailiya-subnets" {
   availability_zone = each.value
   cidr_block        = cidrsubnet(var.cidr_block, 2, index(data.aws_availability_zones.azs.names, each.value))
 }
+output "vpcblock" {
+value=aws_vpc.ailiya.id
+}
