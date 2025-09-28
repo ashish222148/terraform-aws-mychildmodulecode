@@ -19,3 +19,4 @@ resource "aws_subnet" "ailiya-subnets" {
 output "vpcblock" {
 value=aws_vpc.ailiya.id
 }
+
